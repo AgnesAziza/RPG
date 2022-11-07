@@ -1,12 +1,12 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class WeaponShop {
+public class WeaponShop implements Interraction {
 	private ArrayList<Weapon> weapons;
 	
 	WeaponShop() {
 		this.weapons = new ArrayList<Weapon>();
-		weapons.add(new Stick()); // il appelle le constrcuteur et il va dedant recup les infos
+		weapons.add(new Stick()); 
 		weapons.add(new Mushroom());
 		weapons.add(new Sword());
 	}
@@ -34,5 +34,11 @@ public class WeaponShop {
 	
 	public String toString() {
 		return weapons.toString();
+	}
+
+	@Override
+	public void playZone(Player player) {
+		buyWeapon(player);
+		
 	}
 }

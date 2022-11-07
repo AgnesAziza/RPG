@@ -1,21 +1,19 @@
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Player implements Personnage {
 	private String name;
 	private int lifeNumber;
 	private int money;
-	private int xp; 
-	private int mana;
 	private Weapon principalWeapon;
 	private ArrayList<Weapon> inventoryWeapons;
 	
-	Player(String name, int lifeNumber, int money, int xp, int mana) {
+	Player(String name, int lifeNumber, int money) {
 		this.name = name;
 		this.lifeNumber = lifeNumber;
 		this.money = money;
-		this.xp = xp; 
-		this.mana = mana; 
 		this.inventoryWeapons = new ArrayList<Weapon>();
+		inventoryWeapons.add(new Sword());
 	}
 	
 	@Override
@@ -26,8 +24,21 @@ public class Player implements Personnage {
 	public void escape() {
 		lifeNumber = lifeNumber - 5;
 	} 
+	public void damagesPlayer(int damages) {
+		lifeNumber = lifeNumber - damages;
+	}
+	public boolean dieOrNotPlayer() {
+		if (lifeNumber > 0) {
+			return true;
+		} else {
+			return false;
+		}
+	};
 	public void chooseWeapon() {
-		
+		if (inventoryWeapons.size() != 0) {
+			Collections.shuffle(inventoryWeapons);
+			principalWeapon = inventoryWeapons.get(0);
+		}
 	}
 	public int getMoney() {
 		return money;
