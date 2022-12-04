@@ -1,5 +1,8 @@
+import java.awt.TextField;
 import java.util.ArrayList;
 import java.util.Collections;
+
+import javax.swing.JTextField;
 
 public class Player implements Personnage {
 	private String name;
@@ -24,7 +27,7 @@ public class Player implements Personnage {
 	public void escape() {
 		lifeNumber = lifeNumber - 5;
 	} 
-	public void damagesPlayer(int damages) {
+ 	public void damagesPlayer(int damages) {
 		lifeNumber = lifeNumber - damages;
 	}
 	public boolean dieOrNotPlayer() {
@@ -49,4 +52,17 @@ public class Player implements Personnage {
 	public String displayInventory() {
 		return inventoryWeapons.toString();
 	}
+	public String namePlayer() {
+		return name;
+	}
+	public void changeNamePlayer(String newName) {
+		name = newName ;
+	}
+	public String toString() {
+		return "Bonjour " + name + " tu as " + money + " pièces et " + lifeNumber + " de points de vie . " + "Monnaie: " + money + " . " + "Point de vie " + lifeNumber + " . " ; 
+	}
+	public String newName() {
+		return newName().toString();
+	}
+
 }

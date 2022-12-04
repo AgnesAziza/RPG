@@ -12,7 +12,7 @@ public class Obstacle implements Interraction{
 	}
 
 	@Override
-	public void playZone(Player player) {
+	public void playZone(Player player, Interface interfaceWeapon) {
 		player.damagesPlayer(damages);
 	}
 }
