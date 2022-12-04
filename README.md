@@ -12,5 +12,8 @@ Ce jeu permet de se ballader sur une map 2D et de croiser aléatoirement des mon
 ## Le système de jeu permet:
 - D’acheter des armes dans un magasin
 - Changer son arme
-- Se déplacer sur une carte virtuelle (matrice 2D): avant, arrière, gauche, droite
+- Se déplacer sur une carte virtuelle (matrice 2D): avant, arrière, gauche,
 - Lors de la rencontre avec des objets, on peut choisir de combattre ou fuir
+
+## Jeu RPG basé sur une interface graphique avec Swing
+- Le joueur peut se déplacer avec les flèches du clavier
